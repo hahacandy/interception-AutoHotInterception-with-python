@@ -25,7 +25,11 @@ class Thuban_hid():
         
         self.GetKeySC = \
         {'a':30,'b':48,'c':46,'d':32,'e':18,'f':33,'g':34,'h':35,'i':23,'j':36,'k':37,'l':38,'m':50,'n':49,'o':24,'p':25,'q':16,'r':19,
-       's':31,'t':20,'u':22,'v':47,'w':17,'x':45,'y':21,'z':44, 'lwin':347}
+        's':31,'t':20,'u':22,'v':47,'w':17,'x':45,'y':21,'z':44,
+         '`':41,'1':2,'2':3,'3':4,'5':6,'7':8,'8':9,'9':10,'0':11,'-':12,'=':13,'backspace':14,
+         'tab':15,'capslock':58,'rshift':42,'lctrl':29,'lwin':347,'lalt':56,'space':57,'한영':114,
+        'esc':1,'f1':59,'f2':60,'f3':61,'f4':62,'f5':63,'f6':64,'f7':65,'f8':66,'f9':67,'f10':68,'f11':87,'f12':88,
+        'printscreen':311}
 
         
     def click_mouse(self, state='left'):
@@ -66,12 +70,23 @@ class Thuban_hid():
         Send_Y = 65535 / self.monitor_height * y  
         self.instance.SendMouseMoveAbsolute(self.mouse_handle, Send_X, Send_Y)
         
+        
     def send_key(self, key):
         code = self.GetKeySC[key.lower()]
         self.instance.SendKeyEvent(self.keyboard_handle, code, 1)
         self.instance.SendKeyEvent(self.keyboard_handle, code, 0)
         
-    def send_str(self, str_list):
         
+    def send_str(self, str_list):
         for char in str_list:
             self.send_key(char)
+            
+            
+    def push_key(self, key):
+        code = self.GetKeySC[key.lower()]
+        self.instance.SendKeyEvent(self.keyboard_handle, code, 1)
+        
+        
+    def up_key(self, key):
+        code = self.GetKeySC[key.lower()]
+        self.instance.SendKeyEvent(self.keyboard_handle, code, 0)
