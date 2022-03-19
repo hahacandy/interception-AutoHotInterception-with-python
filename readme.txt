@@ -1,12 +1,12 @@
 1.
 https://github.com/oblitum/Interception/releases
-圧縮を回答して
+圧縮を解凍して
 Interception\command line installer\install-interception.exe を設置して再起動
 
 
 2.
 https://github.com/evilC/AutoHotInterception
-圧縮を回答して
+圧縮を解凍して
 AutoHotInterception\Lib　の中に
 Interception\library　を全部上書きする
 
