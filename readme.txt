@@ -20,7 +20,7 @@ AutoHotInterception\Monitor.ahk
 4.
 環境設定
 Python 3.8.10
-pip install pythonnet==2.5.2
+pip install pythonnet==2.5.2, keyboard
 
 
 5.
