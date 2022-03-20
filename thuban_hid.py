@@ -7,6 +7,9 @@ clr.AddReference("AutoHotInterception")
 import AutoHotInterception
 import System
 
+import pyautogui
+import time
+
 class Thuban_hid():
     
     def __init__(self, mouse_handle_name, keyboard_handle_name):
@@ -90,3 +93,12 @@ class Thuban_hid():
     def up_key(self, key):
         code = self.GetKeySC[key.lower()]
         self.instance.SendKeyEvent(self.keyboard_handle, code, 0)
+        
+
+    def search_image(self, img_path):
+        p_list = pyautogui.locateAllOnScreen(img_path)
+        p_list = list(p_list)
+        if len(p_list) > 0:
+            return p_list[0]
+        else:
+            None
