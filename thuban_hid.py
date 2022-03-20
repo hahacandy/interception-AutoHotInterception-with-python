@@ -99,8 +99,8 @@ class Thuban_hid():
         self.instance.SendKeyEvent(self.keyboard_handle, code, 0)
         
 
-    def search_image(self, img_path):
-        p_list = pyautogui.locateAllOnScreen(img_path)
+    def search_image(self, img_path, confidence):
+        p_list = pyautogui.locateAllOnScreen(img_path, confidence=confidence)
         p_list = list(p_list)
         if len(p_list) > 0:
             return p_list
