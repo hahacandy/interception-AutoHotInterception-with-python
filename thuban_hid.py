@@ -45,6 +45,8 @@ class Thuban_hid():
             self.instance.SendMouseButtonEvent(self.mouse_handle, 1, 0)
         else:
             pass
+        
+        time.sleep(0.1)
 
         
     def push_mouse(self, state='left'):
@@ -73,6 +75,8 @@ class Thuban_hid():
         Send_Y = 65535 / self.monitor_height * y  
         self.instance.SendMouseMoveAbsolute(self.mouse_handle, Send_X, Send_Y)
         
+        time.sleep(0.1)
+        
         
     def send_key(self, key):
         code = self.GetKeySC[key.lower()]
@@ -99,6 +103,6 @@ class Thuban_hid():
         p_list = pyautogui.locateAllOnScreen(img_path)
         p_list = list(p_list)
         if len(p_list) > 0:
-            return p_list[0]
+            return p_list
         else:
             None
