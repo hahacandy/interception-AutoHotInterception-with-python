@@ -13,7 +13,7 @@ Interception\command line installer\install-interception.exe を設置して再�
 
 
 2.
-https://github.com/evilC/AutoHotInterception
+https://github.com/evilC/AutoHotInterception/releases
 圧縮を解凍して
 AutoHotInterception\Lib　の中に
 Interception\library　を全部上書きする
