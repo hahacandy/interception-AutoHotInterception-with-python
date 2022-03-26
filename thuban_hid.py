@@ -113,7 +113,7 @@ class Thuban_hid():
         else:
             None
 
-    @dispatch(str, float)
+    @dispatch(str, float, int, int, int, int)
     def search_image(self, img_path, confidence, x1, y1, x2, y2):
         p_list = pyautogui.locateAllOnScreen(img_path, confidence=confidence, region=(x1, y1, x2, y2))
         p_list = list(p_list)
