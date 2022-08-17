@@ -9,7 +9,9 @@
 1.
 https://github.com/oblitum/Interception/releases
 圧縮を解凍して
-Interception\command line installer\install-interception.exe を設置して再起動
+Interception\command line installer\install-interception.exe 
+cmdで　install-interception.exe /install　実行し
+再起動
 
 
 2.
@@ -28,7 +30,7 @@ AutoHotInterception\Monitor.ahk
 4.
 環境設定
 Python 3.8.10
-pip install pythonnet==2.5.2, keyboard, pyautogui
+pip install pythonnet==2.5.2 keyboard pyautogui
 
 
 5.
